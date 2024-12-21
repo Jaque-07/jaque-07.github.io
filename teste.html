@@ -1,0 +1,43 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">  <!-- Adicionei o atributo lang para melhor SEO e acessibilidade -->
+<head>
+  <meta charset="UTF-8">
+  <title>Restrições de Campo de Data</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    input[type="date"] {
+      width: 15rem;
+    }
+  </style>
+</head>
+<body>
+  <h2>Restrições de Campo de Data</h2>
+
+  <p>Utilize os atributos <code>min</code> e <code>max</code> para adicionar restrições às datas:</p>
+  <form action="/action_page.php" method="post">  <!-- Adicionei o atributo method="post" para melhor segurança -->
+    <label for="datemin">
+      Digite uma data após 2000-01-01:
+    </label>
+    <input type="date" id="datemin" name="datemin" min="2000-01-02">
+
+    <br><br>
+
+    <label for="datemax">
+      Digite uma data antes de 1980-01-01:
+    </label>
+    <input type="date" id="datemax" name="datemax" max="1979-12-31">
+
+    <br><br>
+
+    <input type="submit" value="Enviar">
+  </form>
+
+</body>
+</html>
